@@ -1,14 +1,16 @@
 #ifndef _DFROBOT_AXP313A_H_
 #define _DFROBOT_AXP313A_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "stdio.h"
 #include "driver/i2c.h"
 #define OV2640 0
 #define OV7725 1
 #define TIME6S 0
 #define TIME10S 0
-
-i2c_port_t _i2c_num; 
-uint8_t _addr;
 
 /**
  * @brief 配置I2C通信
@@ -48,5 +50,8 @@ uint8_t _addr;
    */
   void setCameraPower(float DVDD ,float AVDDorDOVDD);
    
+#ifdef __cplusplus
+}
+#endif
 
 #endif
